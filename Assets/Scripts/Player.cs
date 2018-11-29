@@ -23,6 +23,11 @@ public class Player : MonoBehaviour {
             availableJumps--; // decrease possible jumps
         }
 
+        // Move down
+        if (Input.GetKeyDown(KeyCode.S)) {
+             GetComponent<Rigidbody2D>().AddForce(-jumpHeight, ForceMode2D.Impulse);
+        }
+
         // Move left
         if (Input.GetKey(KeyCode.A) && (transform.position.x >= -10.2f)) {
             transform.Translate(Vector3.left * Time.deltaTime * movementSpeed, Space.World);
@@ -31,6 +36,13 @@ public class Player : MonoBehaviour {
         // Move right
         if (Input.GetKey(KeyCode.D) && (transform.position.x <= 10.2f)) {
             transform.Translate(Vector3.right * Time.deltaTime * movementSpeed, Space.World);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if ((collision.gameObject.name == "Ground")) {
+            availableJumps = 2;
         }
     }
 
