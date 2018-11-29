@@ -31,23 +31,33 @@ public class Player : MonoBehaviour {
         }
 
         // Move left
-        if (Input.GetKey(KeyCode.A) && (transform.position.x >= -11.75f)) {
+        if (Input.GetKey(KeyCode.A) && (transform.position.x >= -10.25f)) {
             transform.Translate(Vector3.left * Time.deltaTime * movementSpeed, Space.World);
         }
 
         // Move right
-        if (Input.GetKey(KeyCode.D) && (transform.position.x <= 11.8f)) {
+        if (Input.GetKey(KeyCode.D) && (transform.position.x <= 10.25f)) {
             transform.Translate(Vector3.right * Time.deltaTime * movementSpeed, Space.World);
+        }
+
+        if(transform.position.x <= -11) {
+            Die();
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // reset double jump when you hit the ground
-        if ((collision.gameObject.tag == "Ground")) {
+        if ((collision.gameObject.tag == "Ground") || (collision.gameObject.tag == "Obstacle")) {
             availableJumps = 2;
             allowCrouch = true;
         }
+    }
+
+    void Die()
+    {
+        Debug.Log("Game Over");
+        // TODO Change to game over
     }
 
 }
