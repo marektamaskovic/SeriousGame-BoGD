@@ -8,6 +8,7 @@ public class Player : MonoBehaviour {
     public Vector2 jumpHeight = new Vector2(0, 25); // jump attributes
     private bool allowJump = true; 
     public int availableJumps = 2; // No. jumps you can make. (Double Jumps)
+    public int lives = 2;
 
     // Use this for initialization
     void Start () {
@@ -31,6 +32,11 @@ public class Player : MonoBehaviour {
         // Move right
         if (Input.GetKey(KeyCode.D) && (transform.position.x <= 10.2f)) {
             transform.Translate(Vector3.right * Time.deltaTime * movementSpeed, Space.World);
+        }
+
+        if (Input.GetKey(KeyCode.K))
+        {
+            lives--;
         }
     }
 
