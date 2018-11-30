@@ -7,7 +7,7 @@ public class Player : MonoBehaviour {
     public int movementSpeed = 10; // movement speed
     public Vector2 jumpHeight = new Vector2(0, 25); // jump attributes
     public int availableJumps = 2; // No. jumps you can make. (Double Jumps)
-    private bool allowCrouch = false;
+    //private bool allowCrouch = false;
 
     // Use this for initialization
     void Start () {
@@ -21,13 +21,13 @@ public class Player : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space) && (availableJumps > 0)) {
             GetComponent<Rigidbody2D>().AddForce(jumpHeight, ForceMode2D.Impulse);
             availableJumps--; // decrease possible jumps
-            allowCrouch = true;
+            //allowCrouch = true;
         }
 
         // Move down
         if (Input.GetKeyDown(KeyCode.S)) {
              GetComponent<Rigidbody2D>().AddForce(-jumpHeight, ForceMode2D.Impulse);
-            allowCrouch = false;
+            //allowCrouch = false;
         }
 
         // Move left
@@ -50,7 +50,7 @@ public class Player : MonoBehaviour {
         // reset double jump when you hit the ground
         if ((collision.gameObject.tag == "Ground") || (collision.gameObject.tag == "Obstacle")) {
             availableJumps = 2;
-            allowCrouch = true;
+            //allowCrouch = true;
         }
     }
 
