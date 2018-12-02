@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Player : MonoBehaviour {
 
     public int movementSpeed = 10; // movement speed
     public Vector2 jumpHeight = new Vector2(0, 25); // jump attributes
     public int availableJumps = 2; // No. jumps you can make. (Double Jumps)
+    public int gameOverSceneIndex = 2; // Game over Screen index
     //private bool allowCrouch = false;
 
     // Use this for initialization
@@ -48,7 +51,7 @@ public class Player : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // reset double jump when you hit the ground
-        if ((collision.gameObject.tag == "Ground") || (collision.gameObject.tag == "Obstacle")) {
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Obstacle")) {
             availableJumps = 2;
             //allowCrouch = true;
         }
@@ -57,7 +60,7 @@ public class Player : MonoBehaviour {
     void Die()
     {
         Debug.Log("Game Over");
-        // TODO Change to game over
+        SceneManager.LoadScene(gameOverSceneIndex);
     }
 
 }
