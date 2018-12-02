@@ -24,4 +24,31 @@ public class Points : MonoBehaviour
 	        pointsChanged = false;
 	    }
     }
+
+    public void PlusChange()
+    {
+        points++;
+        pointsChanged = true;
+    }
+     
+    public void MinusChange()
+    {
+        if (points > 0)
+        {
+            points--;
+            pointsChanged = true;
+        }
+    }
+
+    public void MultiplyChange()
+    {
+        points = points * 2;
+        pointsChanged = true;
+    }
+
+    public void DivChange()
+    {
+        points = points / 2;
+        pointsChanged = true;
+    }
 }

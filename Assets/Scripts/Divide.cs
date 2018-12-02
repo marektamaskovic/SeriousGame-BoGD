@@ -19,9 +19,9 @@ public class Divide : MonoBehaviour {
         // If minus collide with Player destroy the object
         // and call score handlers. 
         if (collision.gameObject.CompareTag("Player")) {
-            Debug.Log("/2 point");
             Destroy(transform.gameObject);
-            // TODO Call score methods
+            Debug.Log("/2 point");
+            GameObject.Find("Canvas").GetComponent<Points>().DivChange();
         }
     }
 }

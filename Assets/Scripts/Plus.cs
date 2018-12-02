@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Plus : MonoBehaviour {
 
+    private GameObject points;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -19,9 +21,9 @@ public class Plus : MonoBehaviour {
         // If plus collide with Player destroy the object
         // and call score handlers. 
         if (collision.gameObject.CompareTag("Player")) {
-            Debug.Log("+1 point");
             Destroy(transform.gameObject);
-            // TODO Call score methods
+            Debug.Log("+1 point");
+            GameObject.Find("Canvas").GetComponent<Points>().PlusChange();
         }
     }
 }
