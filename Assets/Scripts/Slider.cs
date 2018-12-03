@@ -9,7 +9,7 @@ public class Slider : MonoBehaviour {
     public double frequency = 1.0f;
     public GameObject[] obstacles;
     public Transform obstacleSpawnPoint;
-    public double killZone = -17.0f;
+    public double killZone = -37.0f;
 
     // Use this for initialization
     void Start () {
