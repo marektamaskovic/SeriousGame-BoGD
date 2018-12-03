@@ -19,9 +19,9 @@ public class Minus : MonoBehaviour {
         // If minus collide with Player destroy the object
         // and call score handlers. 
         if (collision.gameObject.CompareTag("Player")) {
-            Debug.Log("-1 point");
             Destroy(transform.gameObject);
-            // TODO Call score methods
+            Debug.Log("-1 point");
+            GameObject.Find("Canvas").GetComponent<Points>().MinusChange();
         }
     }
 }
