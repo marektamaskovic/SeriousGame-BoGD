@@ -53,7 +53,14 @@ public class Player : MonoBehaviour {
         // reset double jump when you hit the ground
         if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Obstacle")) {
             availableJumps = 2;
+            Debug.Log("Jumps reset");
             //allowCrouch = true;
+        }
+
+        if (collision.gameObject.CompareTag("Water"))
+        {
+            Debug.Log("You drowned.");
+            Die();
         }
     }
 
