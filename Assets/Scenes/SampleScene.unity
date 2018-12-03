@@ -461,7 +461,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsObject: {fileID: 1902897828}
   pointsChanged: 1
-  points: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

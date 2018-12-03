@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Plus : MonoBehaviour {
 
-    private GameObject points;
-
 	// Use this for initialization
 	void Start () {
 		
