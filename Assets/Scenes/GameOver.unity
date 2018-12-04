@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 270296663}
   - component: {fileID: 270296662}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Status
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -356,7 +356,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Game Over
+  m_Text: 
 --- !u!222 &270296663
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 703854004}
   - component: {fileID: 703854008}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -474,6 +474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsObject: {fileID: 139628244}
+  mainText: {fileID: 270296662}
 --- !u!1 &762192090
 GameObject:
   m_ObjectHideFlags: 0

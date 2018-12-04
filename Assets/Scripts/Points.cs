@@ -15,6 +15,7 @@ public class Points : MonoBehaviour
     // Use this for initialization
     void Start () {
         DontDestroyOnLoad(this.gameObject);
+        points = 0;
 
         pointsObject = GameObject.Find("Canvas/Points").GetComponent<Text>();
 
@@ -27,18 +28,11 @@ public class Points : MonoBehaviour
 	    {
 	        pointsObject.text = points.ToString();
 	        pointsChanged = false;
-            if (points > 42)
+            if (points >= 42)
             {
                 gameOverSceneIndex = 2;
                 Die();
             }
-            /*
-            if (points == 42)
-            {
-                gameOverSceneIndex = 3;
-                Die();
-            }
-            */
         }
     }
 
