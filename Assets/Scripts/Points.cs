@@ -7,16 +7,20 @@ public class Points : MonoBehaviour
 {
 
     public Text pointsObject;
-    public bool pointsChanged = true;
+    public bool pointsChanged;
+    public static int points;
 
-    public int points = 0;
 	// Use this for initialization
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
+        DontDestroyOnLoad(this.gameObject);
+
+        pointsObject = GameObject.Find("Canvas/Points").GetComponent<Text>();
+        points = 0;
+        pointsChanged = true;
+    }
+
+    // Update is called once per frame
+    void Update ()
 	{
 	    if (pointsChanged)
 	    {
@@ -50,5 +54,10 @@ public class Points : MonoBehaviour
     {
         points = points / 2;
         pointsChanged = true;
+    }
+
+    public int GetPoints()
+    {
+        return points;
     }
 }
