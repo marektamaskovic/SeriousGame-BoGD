@@ -2,21 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Points : MonoBehaviour
 {
 
     public Text pointsObject;
-    public bool pointsChanged;
-    public static int points;
+    public bool pointsChanged = true;
+    public static int points = 0;
+    public int gameOverSceneIndex;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         DontDestroyOnLoad(this.gameObject);
 
         pointsObject = GameObject.Find("Canvas/Points").GetComponent<Text>();
-        points = 0;
-        pointsChanged = true;
+
     }
 
     // Update is called once per frame
@@ -26,7 +27,19 @@ public class Points : MonoBehaviour
 	    {
 	        pointsObject.text = points.ToString();
 	        pointsChanged = false;
-	    }
+            if (points > 42)
+            {
+                gameOverSceneIndex = 2;
+                Die();
+            }
+            /*
+            if (points == 42)
+            {
+                gameOverSceneIndex = 3;
+                Die();
+            }
+            */
+        }
     }
 
     public void PlusChange()
@@ -59,5 +72,11 @@ public class Points : MonoBehaviour
     public int GetPoints()
     {
         return points;
+    }
+
+    void Die()
+    {
+        Debug.Log("Game Over");
+        SceneManager.LoadScene(gameOverSceneIndex);
     }
 }
