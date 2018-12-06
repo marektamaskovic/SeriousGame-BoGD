@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 4712360459846158}
   - component: {fileID: 2569400266335911308}
   - component: {fileID: 114344313716946368}
+  - component: {fileID: 114972745023994656}
   m_Layer: 0
   m_Name: Obstacle_oliver_3
   m_TagString: Obstacle
@@ -270,6 +271,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20f7a250e3fb2d049ba4727ed5a120b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114972745023994656
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1886230205720890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d961cb444e563ac45a4cb40b3f691426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212185647722465810
