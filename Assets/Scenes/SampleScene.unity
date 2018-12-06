@@ -798,6 +798,7 @@ MonoBehaviour:
   - {fileID: 1570477573585142, guid: baa1385105cb19f43835da461ecd17e0, type: 2}
   - {fileID: 1221412930034758, guid: c1252a9f3460b274883e92f6f1977797, type: 2}
   - {fileID: 1140766513833486, guid: b527202638a8c6543a20f221d7649ef9, type: 2}
+  - {fileID: 1090749840920694, guid: e4e2bc240bf36d340a6a7943e7a2a1ca, type: 2}
   obstacleSpawnPoint: {fileID: 1171733387}
   killZone: -27
 --- !u!224 &1930013012
