@@ -1322,8 +1322,8 @@ MonoBehaviour:
     or by hitting the space bar for jumping. At the same time try to collect the needed
     symbols (+-x/ ). Each and every one acts the way it says on it ( by adding, subtracting,
     multiplying or dividing  Your score by two). Your goal is to get 42 points. If
-    You go over, You`re done. If You get hit by a wall or drown in the water, You`re
-    done. Try to keep up the pace and do Your math. \nGood luck!"
+    You go over, You`re done. If You get hit by a wall, collide with the UFO or drown
+    in the water, You`re done. Try to keep up the pace and do Your math. \nGood luck!"
 --- !u!222 &1030551584
 CanvasRenderer:
   m_ObjectHideFlags: 0
