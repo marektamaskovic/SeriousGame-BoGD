@@ -282,7 +282,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.8, y: -167.6}
+  m_AnchoredPosition: {x: 0.7, y: -200}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &97470987
@@ -1282,8 +1282,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 12, y: -28.86}
-  m_SizeDelta: {x: 311.99, y: 129.06}
+  m_AnchoredPosition: {x: 12, y: -58.2}
+  m_SizeDelta: {x: 312, y: 194.4}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1030551583
 MonoBehaviour:
@@ -1308,7 +1308,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 10
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 1
@@ -1318,12 +1318,12 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "This is a simple game to help You learn how to do simple math, but in an
-    edutaining way. Move Your bot to tackle the obstackles, with the letters A or
-    D or for jumping by hitting the space bar. To collect the +-x/ symbols, each and
-    every one acts the way it says on it. By adding, subtracting, multiplying or dividing
-    \ Your score by two. Your goal is to get 42 points. If You go over, You`re done.
-    If You get hit by a wall or drown in the water, You`re done. Try to keep up the
-    pace and do Your math. \nGood luck!"
+    edutaining way. Move Your bot to tackle the obstacles, with the letters A or D
+    or by hitting the space bar for jumping. At the same time try to collect the needed
+    symbols (+-x/ ). Each and every one acts the way it says on it ( by adding, subtracting,
+    multiplying or dividing  Your score by two). Your goal is to get 42 points. If
+    You go over, You`re done. If You get hit by a wall, collide with the UFO or drown
+    in the water, You`re done. Try to keep up the pace and do Your math. \nGood luck!"
 --- !u!222 &1030551584
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1560,8 +1560,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 75.2, y: 60}
-  m_SizeDelta: {x: 187, y: 123.5}
+  m_AnchoredPosition: {x: 75.2, y: 143.2}
+  m_SizeDelta: {x: 187, y: 40.3}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1202840058
 MonoBehaviour:

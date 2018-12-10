@@ -62,6 +62,12 @@ public class Player : MonoBehaviour {
             Debug.Log("You drowned.");
             Die();
         }
+
+        if (collision.gameObject.CompareTag("Ufo"))
+        {
+            Debug.Log("You were abducted by aliens.");
+            Die();
+        }
     }
 
     void Die()
